@@ -6782,10 +6782,22 @@ body {
   color: #0000FF;
 }
 .text1 {
-  padding: -20px;
-  font-size: 18px;
-  font-style: italic;
-}
-.espacamento1 {
   padding: 0px;
+  font-size: 15px;
+}
+null {
+  font-size: 50px;
+}
+.seecolors {
+  font-size: 50px;
+  padding-top: 80px;
+}
+.textodicas {
+  padding: 0px;
+}
+.seedicas {
+  font-size: 50px;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 0px;
 }

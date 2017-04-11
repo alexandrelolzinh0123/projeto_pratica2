@@ -6777,12 +6777,10 @@ body {
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
 .see-menu {
-  font-size: 25px;
+  font-size: 15px;
 }
 .see {
-  font-size: 80px;
+  font-size: 50px;
   color: #FFFFFF;
-}
-.paragrafo-footer {
-  font-size: 20px;
+  font-style: italic;
 }
