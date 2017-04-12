@@ -30,7 +30,7 @@
 	}elseif (($color_tran['blue'] = 0) && ($color_tran['red'] = 0) && ($color_tran['green'] = 0)) {
 		echo "<p>"."branco"."</p>";
 	}elseif (($color_tran['blue'] = 255) && ($color_tran['red'] = 255) && ($color_tran['green'] = 255)) {
-		echo "<p>"."branco"."</p>";
+		echo "<p>"."preto"."</p>";
 	}
 
  ?>
