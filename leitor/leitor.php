@@ -26,6 +26,7 @@
     <div><video id="video" width="640" height="480" autoplay></video></div>
     <div><button id="snap">Tirar Foto</button></div>
     <div><button id="save">Salvar Foto</button></div>
+    <div><button id="detectar">detectar cor</button></div>
     <div><canvas id="canvas" width="640" height="480"></canvas></div>
 <script>
     window.addEventListener("DOMContentLoaded", function() {
@@ -60,6 +61,10 @@
     });
     document.getElementById("save").addEventListener("click", function() {      
         $.post('fotossalvar.php', {imagem:canvas.toDataURL()}, function(data){
+        },'json');
+    });
+    document.getElementById("detectar").addEventListener("click", function() {      
+        $.post('detectar.php', {imagem:canvas.toDataURL()}, function(data){
         },'json');
     });
 </script>  
