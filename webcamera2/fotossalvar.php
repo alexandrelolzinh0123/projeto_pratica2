@@ -6,6 +6,6 @@
         return( $output_file ); 
     }       
     $imagem = str_replace('data:image/png;base64,','',$_POST['imagem']);        
-    base64_to_jpeg($imagem, "imagem/foto.png");        
+    base64_to_jpeg($imagem, "pasta1/foto1.png");        
     echo json_encode(array('imagem' => 1));  
     ?>
