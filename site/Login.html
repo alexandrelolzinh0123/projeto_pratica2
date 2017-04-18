@@ -1,104 +1,65 @@
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="login.css" rel="stylesheet" type="text/css">
-  </head><body class="rodop">
-    <div class="section">
-      <div class="background-image background-image-fixed" style="background-image : url('cores.jpg')"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 see-login">
-            <a class="navbar-brand see-login" href="Home.html" id="home">See Colors</a>
-          </div>
-        </div>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="login.css" rel="stylesheet" type="text/css"> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+  </head>
+  
+<body>
+ 
+  <div class="section">
+    <div class="background-image background-image-static p-0" style="background-image : url('cores.jpg')"></div>
+    <div class="contain">
+      <div class="row">
+        <div class="col-md-12 see-login"> <a class="navbar-brand see-login" href="Home.html" id="home">See Colors</a> </div>
       </div>
     </div>
-    <div class="navbar navbar-default navbar-fixed-top navbar-inverse test2">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+  </div>
+  <div class="navbar navbar-default navbar-fixed-top navbar-inverse test2">
+    <div class="containe">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right test2">
-            <li id="home">
-              <a href="Home.html">Home</a>
-            </li>
-            <li id="dicas">
-              <a href="Dicas.html">Dicas</a>
-            </li>
-            <li>
-              <a href="#">Paletas</a>
-            </li>
-            <li class="test2">
-              <a href="#">Fórum</a>
-            </li>
-            <li id="login">
-              <a href="Login.html">Login</a>
-            </li>
-          </ul>
-        </div>
+          </button> </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right test2">
+          <li id="home"> <a href="Home.html">Home</a> </li>
+          <li id="dicas"> <a href="Dicas.html">Dicas</a> </li>
+          <li class="test2"> <a href="#">Fórum</a> </li>
+          <li id="login"> <a href="Login.html">Login</a> </li>
+        </ul>
       </div>
     </div>
-    <div class="esplogin section text-left">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <form role="form" class="esplogin">
-              <div class="form-group has-success" draggable="true">
-                <label class="control-label" for="exampleInputEmail1">Email</label>
-                <input class="form-control input-lg" id="exampleInputEmail1" placeholder="Digite o email" type="email">
-              </div>
-              <div class="form-group has-success">
-                <label class="control-label" for="exampleInputPassword1">Senha</label>
-                <input class="form-control input-lg" id="exampleInputPassword1" placeholder="Digite a senha" type="password">
-              </div>
-              <button type="submit" class="active btn btn-lg btn-success">Entrar</button>
-            </form>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Bem vindos!</h1>
+      <form class="form"> <input type="text" placeholder="Nome"> <input type="password" placeholder="Senha"> <button type="submit" id="login-button">Entrar</button> </form>
     </div>
-    <footer class="rodop section section-info">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <h1 class="text-primary">Footer header</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-              <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-              <br>Ut enim ad minim veniam, quis nostrud</p>
-          </div>
-          <div class="col-sm-6">
-            <p class="text-info text-right">
-              <br>
-              <br>
-            </p>
-            <div class="row">
-              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 hidden-xs text-right">
-                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-primary"></i></a>
-                <a href="#"><i class="fa fa-3x fa-facebook fa-fw text-primary"></i></a>
-                <a href="#"><i class="fa fa-3x fa-fw fa-github text-primary"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <ul class="bg-bubbles p-0">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+   
   
+</body>
 
-</body></html>
+</html>
