@@ -32,25 +32,36 @@ var_dump($thumb);
 
 
  $colors = [
- 	"vermelho" => [255.0.0],
-    "verde" => [0.255.0],
-    "azul"   => [0.0.255],
-    "amarelo" => [255.255.0],
+ 	"vermelho" => [255,0,0],
+    "verde" => [0,255,0],
+    "azul"   => [0,0,255],
+    "amarelo" => [255,255,0],
+];
+$array_dist = [
 ];
 
-function dist_color($c1,$c2){
- $d = sqrt(pow(($c1['red'] - $c2['vermelho']), 2) + pow(($c1['green'] - $c2['verde']), 2) + pow(($c1['blue'] - $c2['azul']), 2));
- echo $d;
-}
+function distancia($c1,$c2,$indice){
+	
+ $d = sqrt(pow($c1['red'] - $c2[$indice][0], 2) + pow($c1['green'] - $c2[$indice][1], 2) + pow($c1['blue'] - $c2[$indice][2], 2));
 
-function cor_proxima(){
-	foreach ($$colors as $key => $value) {
-		# code...
+
+ return $d ;
+}
+$min = '';
+foreach ($colors as $key => $value) {
+	$dist = distancia($rgb,$colors,$key);
+	echo $key."=>".$dist."<br>\n";
+
+	array_push($array_dist, $dist);
+
+	$dst = min($array_dist);
+
+	if ($array_dist[$key] > $min) {
+	 	$min += $array_dist[$key];
 	}
 }
 
-
-
+// var_dump($dst);
 
 
 
