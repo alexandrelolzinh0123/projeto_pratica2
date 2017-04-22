@@ -6,98 +6,86 @@
 <body>
 <?php
 
-$filename = 'pasta1/foto1.png';
+	$filename = 'pasta1/foto1.png';
 
-// Get new sizes
-list($width, $height) = getimagesize($filename);
-$newwidth = $width - $width + 3;
-$newheight = $height - $height + 3;
-
-
-// Load
-$thumb = imagecreatetruecolor($newwidth, $newheight);
-$source = imagecreatefrompng($filename);
-
-// Resize
-imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-
-// Output
-imagepng($thumb);
-
-var_dump($thumb);
-
- $index = imagecolorat($thumb, 0, 0);
- $rgb = imagecolorsforindex($thumb, $index);
- var_dump($rgb);
-
-
- $colors = [
- 	"vermelho" => [255,0,0],
-    "verde" => [0,255,0],
-    "azul"   => [0,0,255],
-    "amarelo" => [255,255,0],
-];
-$array_dist = [
-];
-
-function distancia($c1,$c2,$indice){
 	
- $d = sqrt(pow($c1['red'] - $c2[$indice][0], 2) + pow($c1['green'] - $c2[$indice][1], 2) + pow($c1['blue'] - $c2[$indice][2], 2));
+	list($width, $height) = getimagesize($filename);
+	$newwidth = $width - $width + 3;
+	$newheight = $height - $height + 3;
 
 
- return $d ;
-}
-$min = '';
-foreach ($colors as $key => $value) {
-	$dist = distancia($rgb,$colors,$key);
-	echo $key."=>".$dist."<br>\n";
 
-	array_push($array_dist, $dist);
+	$thumb = imagecreatetruecolor($newwidth, $newheight);
+	$source = imagecreatefrompng($filename);
 
-	$dst = min($array_dist);
+	
+	imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 
-	if ($array_dist[$key] > $min) {
-	 	$min += $array_dist[$key];
+	 imagepng($thumb);
+
+	 var_dump($thumb);
+
+	 $index = imagecolorat($thumb, 0, 0);
+	 $rgb = imagecolorsforindex($thumb, $index);
+	 var_dump($rgb);
+
+	 //função para calcular a distancia das cores
+	 function distancia($c1,$c2,$indice){
+		
+	 $d = sqrt(pow($c1['red'] - $c2[$indice][0], 2) + pow($c1['green'] - $c2[$indice][1], 2) + pow($c1['blue'] - $c2[$indice][2], 2));
+
+	 return $d ;
+
 	}
-}
 
-// var_dump($dst);
+	// array de cores que vai ser usado na função para comparar com o rgb da imagem capturada
+	 $colors = [
+	 	"vermelho" => [255,0,0],
+	    "verde" => [0,255,0],
+	    "azul"   => [0,0,255],
+	    "amarelo" => [255,255,0],
+	];
 
+	//array que contem as distancias de cada uma das cores armazenadas no array "colors"
+	$array_dist = [];
 
+	//array que contem o nome das cores 
+	$array_colors = [];
 
+	//laço para percorrer o array "colors"
+	foreach ($colors as $key => $value) {
 
+		//variavel dist armazena o resultado da função distancia
+		$dist = distancia($rgb,$colors,$key);
 
+		//imprime o nome da cor e a distancia dela até a cor rgb da imagem capturada
+		echo $key."=>".$dist."<br>\n";
 
-// obtém uma cor
-// $start_x = 40;
-// $start_y = 50;
-// $color_index = imagecolorat($img, $start_x, $start_y);
+		//joga o valor da variavel dist no array "$array_dist"
+		array_push($array_dist, $dist);
 
-// torna legível
-// $color_tran = imagecolorsforindex($img, $color_index);
+		//joga o valor da variavel key(que guarda o nome das cores) no array "$array_colors"
+		array_push($array_colors, $key);
 
-// Qual é?
-// print_r($color_tran);
+		//mesclando o array_colors(nome das cores) e array_dist(distancia das cores) e jogando em um array tornando array_colors o indice de array_distance e array_dist o valor de array_distance 
+		$array_distance = array_combine($array_colors, $array_dist);
+		
+	}
 
-// if (($color_tran['red'] > $color_tran['blue']) && ($color_tran['red'] > $color_tran['green'])) {
-// 	echo "<p>"."vermelho"."</p>";
-// } else if (($color_tran['blue'] > $color_tran['green']) && ($color_tran['blue'] > $color_tran['red'])) {
-// 	echo "<p>"."azul"."</p>";
-// } else if (($color_tran['green'] > $color_tran['blue']) && ($color_tran['green'] > $color_tran['red'])) {
-// 	echo "<p>"."verde"."</p>";
-// }
-// 	$color = imagecolorexact ($img, $color_tran['red'], $color_tran['green'], $color_tran['blue'] );
-// // $cor = imagecolorclosest($img, $color_tran['red'], $color_tran['blue'], $color_tran['green']);
-// // print_r($cor);
-// // echo "<br>";
-// 	echo $color;
-// 	echo "<br>";
-// 	echo dechex($color);
+	//criando um laço foreach para percorrer o array "array_distance"
+	foreach ($array_distance as $key => $value) {
+		//condição para verificar se o menor valor do array_distance é igual a $value
+		if (min($array_distance) == $value) {
+			// se a condição acima for verdadeira o indice(cor da distancia mais proxima) vai ser imprimido na tela
+			echo "cor mais proxima : ".$key."<br>\n" ;
+			// parando o laço
+			break;
+		}
+	}
 
-// echo dechex($cor);
-
-
-
+	var_dump($array_dist);
+	var_dump($array_colors);
+	var_dump($array_distance);
 ?>
 </body>
 </html>
