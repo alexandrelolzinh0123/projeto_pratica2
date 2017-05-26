@@ -1,0 +1,24 @@
+Olá o/
+
+No pdf está mais ou menos o que a gente imaginou como sendo a página da web do aplicativo.
+
+Seria apenas uma página, e todas as outras áreas acessadas por rolagem através de um menu.
+
+No topo da página teria a logo do lado esquerdo, um breve resumo do aplicativo, e o link para download.
+
+Quando clicar no "Sobre nós" a página irá rolar até a parte onde está localizada essa área, e o menu ficará topado no topo da navegação.
+
+Vou deixar aqui um link de um site que usa um menu parecido com esse: https://www.sketchup.com/pt-BR (No caso deles, o menu some conforme a página desce).
+O que imaginamos foi que o menu não deveria sumir, se imaginarmos como camadas, teria uma camada da página, e outra camada acima só para esse menu.
+E ele ao invés de sumir com a rolagem, ele ficaria travado quando chegasse ao topo.
+
+Quando clicar em "Dicas", a mesma coisa, ele irá rolar até a parte onde está localizada essa área.
+
+Doações também.
+Em doações teriam duas formas, boleto ou cartão de crédito, sendo o lado direito que está vazio, a área destinada a inserção de dados, como se funcionasse com aquelas janelas de pagamento de e-commerce.
+
+Login também.
+
+Em relação a paleta de cores, a página será apenas em Preto e Branco, e como vocês podem ver no arquivo, sempre que uma área estiver à mostra ou ativa ela ficará com a cor inversa para mostrar que esta selecionada.
+
+Os arquivos em relação a fonte, já a logo, a gente tá mandando também, mas possivelmente terão alguns ajustes

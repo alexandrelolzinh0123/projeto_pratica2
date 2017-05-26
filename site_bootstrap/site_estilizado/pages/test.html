@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="bootstrap-social/bootstrap-social.less">
+  <link rel="stylesheet" href="bootstrap-social/assets/css/font-awesome.css">
+  <script src="../bootstrap/3.3.7/js/jquery.min.js"></script>
+  <script src="bootstrap-social/js/docs.js"></script>
+  <script src="bootstrap-social/js/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative; 
+  }
+  .navbar, .navbar-inverse, .navbar-fixed-top{
+    background-color: black;
+  }
+  #section1 {padding-top:50px;height:870px;color: black; background-color: white;}
+  #section2 {padding-top:50px;height:870px;color: black; background-color: yellow;}
+  #section3 {padding-top:50px;height:870px;color: black; background-color: white;}
+  #section4 {padding-top:50px;height:870px;color: black; background-color: white;}
+  #section5 {padding-top:50px;height:870px;color: black; background-color: white;}
+  .img-responsive{
+    position: absolute;
+    left: 
+  }
+  .btn-group {
+    background-color: black;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          
+          <li class="btn-group btn-info btn-lg">
+
+            <a href="#section1">
+            <span class="glyphicon glyphicon-education"></span>Quem Somos
+            </a>
+
+          </li>
+
+          <li class="btn-group btn-info btn-lg">
+            <a href="#section2 ">
+              <span class="glyphicon glyphicon-list-alt"></span>Dicas
+            </a>
+          </li>
+
+          <li class="btn-group btn-info btn-lg">
+
+          <a href="#section3">
+          <span class="glyphicon glyphicon-piggy-bank"></span>Doações</a>
+          </li>
+
+             
+        </ul>
+         <ul class="nav navbar-nav navbar-right">
+      <li class="btn-group btn-info btn-lg"><a href="#section5"><span class="glyphicon glyphicon-user"></span> Cadastro</a></li>
+      <li class="btn-group btn-info btn-lg"><a href="#section4"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>  
+        
+      </div>
+    </div>
+  </div>
+
+</nav>    
+
+<div id="section1" class="container-fluid">
+  <h1 align="center">Sobre nós</h1>
+  <h2 align="justify">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while456456 scrolling!</h2>
+  <img src="see_colors/sobre.png" class="img-responsive" alt="#" width="400" height="236">
+</div>
+
+<div id="section2" class="container-fluid">
+  <h1 align="center">Section 2</h1>
+  <p align=”Justify”>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+<div id="section3" class="container-fluid">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div class="container">
+<form id="section4">
+    <div class="form-group ">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="form-group">
+      <input type="submit" class="form-control" value="Entrar">
+    </div>
+    <div class="btn-block btn-group btn-group-justified">
+    <a class="btn btn-social btn-facebook">
+      <span class="fa fa-facebook"></span>Login com o Facebook
+    </a>
+    <a class="btn btn-social btn-google">
+      <span class="fa fa-google"></span> Login com o Gmail
+    </a>
+    </div>
+  </form>
+  
+</div>
+<div class="container">
+ 
+  <form id="section5">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="email" class="form-control" id="email" placeholder="digite seu email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="digite seu email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="digite a senha" name="pwd">
+    </div>
+  
+   <button type="submit" class="btn btn-block btn-default">cadastro</button>
+    
+  <div class="btn-block btn-group btn-group-justified">
+    <a class="btn btn-social btn-facebook">
+      <span class="fa fa-facebook"></span> cadastre-se com o Facebook
+    </a>
+    <a class="btn btn-social btn-google">
+      <span class="fa fa-google"></span> cadastre-se com o Gmail
+    </a>
+    </div>
+      
+  </form>
+</div>
+<script>
+$(document).ready(function(){
+    $('body').scrollspy({target: ".navbar", offset: 50});   
+});
+</script>
+
+</body>
+</html>
